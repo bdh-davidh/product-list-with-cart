@@ -1,1 +1,240 @@
-/* You can add global styles to this file, and also import other style files */
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol,
+button {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+/* Adjust line heights */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 0.9;
+}
+
+/* Remove list styles on ul, ol elements with a class */
+:where(ul[role="list"]),
+:where(ol[role="list"]) {
+  padding-inline: 0;
+  list-style-type: none;
+}
+
+/* Set core body defaults */
+body {
+  min-block-size: 100vh;
+  overflow-y: scroll;
+  line-height: 1.6;
+  text-rendering: optimizespeed;
+  color: #000;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* Preserve aspect ratio */
+img[width][height] {
+  block-size: auto;
+}
+
+/* Let SVG scale without boundaries */
+img[src$=".svg"] {
+  max-inline-size: 100%;
+  max-inline-size: none;
+  block-size: auto;
+}
+
+/* Remove all default button styles */
+button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  overflow-wrap: break-word;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Add space for anchor links */
+[id] {
+  scroll-margin-top: 2ex;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ABSTRACTS */
+
+:root {
+  /* Standard sizes */
+  --space-3xs: clamp(0.25rem, calc(0.25rem + 0vw), 0.25rem);
+  --space-2xs: clamp(0.5rem, calc(0.5rem + 0vw), 0.5rem);
+  --space-xs: clamp(0.69rem, calc(0.67rem + 0.09vw), 0.75rem);
+  --space-s: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem);
+  --space-m: clamp(1.44rem, calc(1.42rem + 0.09vw), 1.5rem);
+  --space-l: clamp(1.88rem, calc(1.83rem + 0.19vw), 2rem);
+  --space-xl: clamp(2.81rem, calc(2.75rem + 0.28vw), 3rem);
+  --space-2xl: clamp(3.75rem, calc(3.66rem + 0.38vw), 4rem);
+  --space-3xl: clamp(5.63rem, calc(5.49rem + 0.56vw), 6rem);
+
+  /* Font-sizes */
+  --font-size-0: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem);
+  --font-size-1: clamp(1.17rem, calc(1.12rem + 0.24vw), 1.33rem);
+  --font-size-2: clamp(1.47rem, calc(1.36rem + 0.47vw), 1.78rem);
+  --font-size-3: clamp(1.83rem, calc(1.64rem + 0.81vw), 2.37rem);
+  --font-size-4: clamp(2.29rem, calc(1.98rem + 1.31vw), 3.16rem);
+
+  /* Colors */
+  --clr-neutral-light: #fff;
+  --clr-neutral-dark: #9899a7;
+  --clr-reaction: #f55;
+  --clr-memory: #ffb21e;
+  --clr-verbal: #00bb8f;
+  --clr-visual: #1125d6;
+  --clr-gradient: linear-gradient(0deg, 60% #2f2ce9, 80% #75f, 95% #6943ff);
+}
+
+/* GLOBAL STYLES  */
+
+@font-face {
+  font-family: Red-Hat-Regular;
+  src: url("../public/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Red-Hat-Italic;
+  src: url("../public/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+}
+
+body {
+  position: relative;
+  font-family: Red-Hat, system-ui, sans-serif;
+  font-size: var(--font-size-0);
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #1125d630;
+  text-wrap: pretty;
+}
+
+main {
+  min-block-size: 100vh;
+}
+
+:is(h1, h2, h3) {
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-3);
+}
+
+h2 {
+  font-size: var(--font-size-1);
+}
+
+h3 {
+  font-size: var(--font-size-2);
+}
+
+:focus-visible {
+  opacity: 1 !important;
+  outline: 2px dashed currentcolor;
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+/* UTILITIES */
+
+.layout {
+  --min: 250px;
+  --max: 700px;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(var(--min), var(--max)) 1fr;
+  place-items: center;
+
+  > * {
+    grid-column: 2;
+  }
+}
+
+.stack > * + * {
+  margin-block-start: var(--stack, var(--space-s, 1em));
+}
+
+.box {
+  padding-inline: var(--padding-inline, var(--space-m, 2em));
+  padding-block: var(--padding-block, var(--space-l, 3em));
+}
+
+.visually-hidden {
+  position: absolute;
+  max-inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}

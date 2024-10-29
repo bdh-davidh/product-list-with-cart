@@ -1,0 +1,14 @@
+:host {
+display: flex;
+flex-wrap: wrap;
+gap: var(--space-m);
+}
+
+main {
+  min-inline-size: 20rem;
+  flex: 2 999999 auto;
+}
+
+aside {
+  flex: 1 1 10rem;
+}

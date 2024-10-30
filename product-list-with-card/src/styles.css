@@ -46,17 +46,6 @@ h4 {
   list-style-type: none;
 }
 
-/* Set core body defaults */
-body {
-  min-block-size: 100vh;
-  overflow-y: scroll;
-  line-height: 1.6;
-  text-rendering: optimizespeed;
-  color: #000;
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-}
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -178,14 +167,11 @@ body {
   line-height: 1.4;
   background-color: var(--clr-rose-50);
   text-wrap: pretty;
+  margin-block: var(--space-xl);
 
   > * {
     grid-column: 2;
   }
-}
-
-main {
-  min-block-size: 100vh;
 }
 
 :is(h1, h2, h3) {

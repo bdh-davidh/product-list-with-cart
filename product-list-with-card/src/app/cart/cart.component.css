@@ -1,0 +1,18 @@
+.cart {
+  background-color: var(--clr-neutral-light);
+
+  h2 {
+    color: var(--clr-red);
+  }
+}
+
+svg {
+  margin-inline: auto;
+  margin-block: var(--space-m);
+}
+
+.placeholder {
+  font-weight: 600;
+  text-align: center;
+  color: var(--clr-rose-500);
+}

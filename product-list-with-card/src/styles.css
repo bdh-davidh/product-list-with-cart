@@ -155,7 +155,7 @@ select {
 }
 
 body {
-  --min: 250px;
+  --min: 0px;
   --max: 1440px;
 
   position: relative;

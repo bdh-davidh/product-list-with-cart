@@ -4,6 +4,7 @@ h2 {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: center;
   gap: var(--space-m);
 }

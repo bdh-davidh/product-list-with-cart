@@ -161,7 +161,7 @@ body {
   position: relative;
   display: grid;
   margin-block: var(--space-xl);
-  grid-template-columns: 1fr minmax(var(--min), var(--max)) 1fr;
+  grid-template-columns: minmax(var(--space-m), 1fr) minmax(var(--min), var(--max)) minmax(var(--space-m), 1fr);
   font-family: Red-Hat-Regular, serif;
   font-size: var(--font-size-0);
   font-weight: 400;
@@ -210,8 +210,8 @@ h3 {
 }
 
 .box {
-  padding-inline: var(--padding-inline, var(--space-m, 2em));
-  padding-block: var(--padding-block, var(--space-l, 3em));
+  padding-inline: var(--padding-inline, var(--space-s, 1em));
+  padding-block: var(--padding-block, var(--space-xs, 0.5em));
 }
 
 .visually-hidden {

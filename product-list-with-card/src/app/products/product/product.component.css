@@ -7,10 +7,15 @@
 }
 
 .category {
+  margin-block-start: calc(var(--space-s) * -0.5);
   color: var(--clr-rose-500);
 }
 
 .price {
   font-weight: 600;
   color: var(--clr-red);
+}
+
+app-button {
+  margin-inline: auto;
 }

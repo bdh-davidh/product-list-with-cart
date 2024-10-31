@@ -1,0 +1,12 @@
+button {
+  display: flex;
+  min-inline-size: 12rem;
+  margin-inline: auto;
+  border: 1px solid var(--clr-red);
+  border-radius: 99999px;
+  justify-content: center;
+  gap: var(--space-xs);
+  font-weight: 600;
+  background-color: var(--clr-neutral-light);
+  transform: translateY(-50%);
+}

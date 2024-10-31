@@ -1,6 +1,6 @@
 <div class="stack product" style="--stack: var(--space-2xs)">
   <img [src]="imagePath" alt="">
-  <button>BUTTON</button>
+  <app-button />
   <p class="category">{{ product.category }}</p>
   <h3>{{ product.name }}</h3>
   <p class="price">{{ product.price | currency: "USD" }}</p>

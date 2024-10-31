@@ -1,0 +1,16 @@
+.product {
+  border-radius: var(--space-2xs);
+
+  img {
+    border-radius: inherit;
+  }
+}
+
+.category {
+  color: var(--clr-rose-500);
+}
+
+.price {
+  font-weight: 600;
+  color: var(--clr-red);
+}

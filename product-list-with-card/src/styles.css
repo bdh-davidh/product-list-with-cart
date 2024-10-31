@@ -146,12 +146,12 @@ select {
 
 @font-face {
   font-family: Red-Hat-Regular;
-  src: url("../public/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+  src: url("../public/assets/fonts/RedHatText-VariableFont_wght.ttf") format("TrueType");
 }
 
 @font-face {
   font-family: Red-Hat-Italic;
-  src: url("../public/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf");
+  src: url("../public/assets/fonts/RedHatText-Italic-VariableFont_wght.ttf") format("TrueType");
 }
 
 body {
@@ -160,14 +160,14 @@ body {
 
   position: relative;
   display: grid;
+  margin-block: var(--space-xl);
   grid-template-columns: 1fr minmax(var(--min), var(--max)) 1fr;
-  font-family: Red-Hat, system-ui, sans-serif;
+  font-family: Red-Hat-Regular, serif;
   font-size: var(--font-size-0);
   font-weight: 400;
   line-height: 1.4;
   background-color: var(--clr-rose-50);
   text-wrap: pretty;
-  margin-block: var(--space-xl);
 
   > * {
     grid-column: 2;
@@ -185,11 +185,12 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-2);
 }
 
 h3 {
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-0);
+  font-weight: 600;
 }
 
 :focus-visible {

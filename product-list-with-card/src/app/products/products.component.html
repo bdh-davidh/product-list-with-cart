@@ -1,1 +1,8 @@
-<p>products works!</p>
+<h2>Deserts</h2>
+<div>
+  <ul class="products">
+    @for (desert of deserts; track desert.name) {
+      <app-product [product]="desert"/>
+    }
+  </ul>
+</div>

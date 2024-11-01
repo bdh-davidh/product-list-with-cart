@@ -5,7 +5,7 @@
   "
 >
   @if (inCart()) {
-    <button class="adjust-quantity">
+    <button class="adjust-quantity" (click)="increment()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="10"
@@ -20,8 +20,8 @@
       </svg>
       <span class="visually-hidden">Add {{ product.name }}</span>
     </button>
-    <span>{{ product.quantity }}</span>
-    <button class="adjust-quantity">
+    <span class="quantity">{{ product.quantity }}</span>
+    <button class="adjust-quantity" (click)="decrement()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="10"
@@ -34,7 +34,7 @@
       <span class="visually-hidden">Remove {{ product.name }}</span>
     </button>
   } @else {
-    <button class="initial">
+    <button class="initial" (click)="increment()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="21"

@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
+import { DesertsService } from '../deserts.service';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
+  styleUrl: './cart.component.css',
 })
 export class CartComponent {
+  desertsService;
 
+  constructor(desertsService: DesertsService) {
+    this.desertsService = desertsService;
+  }
 }

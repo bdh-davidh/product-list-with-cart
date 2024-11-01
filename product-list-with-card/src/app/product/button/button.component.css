@@ -16,8 +16,13 @@
   color: var(--clr-neutral-light);
 }
 
+.quantity {
+  min-inline-size: 3ch;
+}
+
 button.initial {
   display: flex;
+  min-block-size: 1.5em;
   margin-inline: auto;
   justify-content: center;
   gap: var(--space-xs);
@@ -25,11 +30,11 @@ button.initial {
 }
 
 button.adjust-quantity {
-  aspect-ratio: 1;
   display: grid;
-  place-items: center;
-  min-width: 1.5em;
-  border-radius: 99999px;
+  min-inline-size: 1.5em;
+  aspect-ratio: 1;
   border: 1px solid var(--clr-neutral-light);
+  border-radius: 99999px;
+  place-items: center;
   background-color: inherit;
 }

@@ -16,3 +16,46 @@ svg {
   text-align: center;
   color: var(--clr-rose-500);
 }
+
+.cart-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .name {
+    font-weight: 600;
+  }
+
+  .quantity {
+    display: inline-block;
+    min-inline-size: 3ch;
+    margin-inline-end: 1em;
+    font-weight: 600;
+    color: var(--clr-red);
+  }
+
+  .price {
+    margin-inline-end: 0.5em;
+    color: var(--clr-rose-500);
+  }
+
+  .item-total {
+    font-weight: 600;
+    color: var(--clr-rose-500);
+  }
+
+  button {
+    padding: var(--space-2xs);
+    background-color: inherit;
+  }
+
+  &:not(:last-of-type)::after {
+    position: absolute;
+    inset-block-end: calc(var(--space-3xs) * -0.5);
+    inline-size: 100%;
+    block-size: 1px;
+    background-color: var(--clr-rose-100);
+    content: "";
+  }
+}

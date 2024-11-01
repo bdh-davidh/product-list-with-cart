@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DesertsService {
-  deserts =  [
+  deserts = [
     {
       image: {
         thumbnail: 'image-waffle-thumbnail.jpg',
@@ -114,8 +114,15 @@ export class DesertsService {
       price: 6.5,
       quantity: 0,
     },
-  ]
+  ];
 
   constructor() {}
 
+  itemsInCart() {
+    return this.deserts.filter((desert) => desert.quantity > 0);
+  }
+
+  cartIsEmpty() {
+    return this.itemsInCart().length <= 0;
+  }
 }

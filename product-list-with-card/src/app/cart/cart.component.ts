@@ -15,4 +15,8 @@ export class CartComponent {
   constructor(desertsService: DesertsService) {
     this.desertsService = desertsService;
   }
+
+  handleRemove(event: any) {
+    this.desertsService.resetQuantity(event.target.closest(".cart-item"))
+  }
 }

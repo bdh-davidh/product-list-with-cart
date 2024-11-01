@@ -116,19 +116,26 @@ export class DesertsService {
     },
   ];
 
-
-
   itemsInCart() {
     return this.deserts.filter((desert) => desert.quantity > 0);
   }
 
   grandTotal() {
     return this.itemsInCart().reduce((acc, cur) => {
-      return acc += (cur.price * cur.quantity)
-    }, 0)
+      return (acc += cur.price * cur.quantity);
+    }, 0);
   }
 
   cartIsEmpty() {
     return this.itemsInCart().length <= 0;
+  }
+
+  resetQuantity(item: any) {
+    const itemName = item.querySelector('.name').textContent;
+    this.deserts.map((item) => {
+      if (item.name === itemName) {
+        item.quantity = 0;
+      }
+    })
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { DesertsService } from '../deserts.service';
 
@@ -11,6 +11,9 @@ import { DesertsService } from '../deserts.service';
 })
 export class DialogComponent {
   @Output() dialogIsOpen = new EventEmitter<boolean>();
+  @ViewChild('appDialog', { static: true })
+  dialog!: ElementRef<HTMLDialogElement>;
+
   desertsService;
 
   constructor(desertsService: DesertsService) {
@@ -18,6 +21,11 @@ export class DialogComponent {
   }
 
   removeAll() {
+    this.dialog.nativeElement.close();
     this.dialogIsOpen.emit(false);
+  }
+
+  ngOnInit() {
+    this.dialog.nativeElement.showModal();
   }
 }

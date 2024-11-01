@@ -15,7 +15,7 @@ export class DesertsService {
       name: 'Waffle with Berries',
       category: 'Waffle',
       price: 6.5,
-      quantity: 1,
+      quantity: 0,
     },
     {
       image: {

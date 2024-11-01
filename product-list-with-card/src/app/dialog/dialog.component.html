@@ -1,7 +1,7 @@
-<div class="confirmation">
-  <div class="stack" style="--stack: var(--space-3xs)">
+<dialog #appDialog class="stack box confirmation">
+  <div class="stack" style="--stack: var(--space-3xs); background-color: var(--clr-rose-50);">
     @for (desert of desertsService.itemsInCart(); track desert.name) {
-    <div class="cart-item">
+    <div class="stack box cart-item" style="--stack: var(--space-2xs)">
       <div class="stack" style="--stack: var(--space-3xs)">
         <p class="name">{{ desert.name }}</p>
         <p>
@@ -13,7 +13,6 @@
                 }}</span>
         </p>
       </div>
-
     </div>
     }
   </div>
@@ -24,4 +23,4 @@
         }}</span>
   </p>
   <button class="box confirm" style="--padding-block: var(--space-xs);" (click)="removeAll()">Start new order</button>
-</div>
+</dialog>

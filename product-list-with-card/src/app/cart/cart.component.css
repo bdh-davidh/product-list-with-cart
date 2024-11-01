@@ -59,3 +59,20 @@ svg {
     content: "";
   }
 }
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+.total {
+    color: var(--clr-rose-500);
+  }
+
+  .grand-total {
+    display: inline-block;
+    margin-inline-start: auto;
+    font-size: var(--font-size-2);
+    font-weight: 900;
+  }
+}

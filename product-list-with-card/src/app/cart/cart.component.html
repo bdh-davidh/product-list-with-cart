@@ -94,5 +94,11 @@
         </div>
       }
     </div>
+    <p class="flex-wrapper">
+      <span class="total">Order Total</span>
+      <span class="grand-total">{{
+        desertsService.grandTotal() | currency: "USD"
+      }}</span>
+    </p>
   }
 </div>

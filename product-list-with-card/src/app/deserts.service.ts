@@ -116,10 +116,16 @@ export class DesertsService {
     },
   ];
 
-  constructor() {}
+
 
   itemsInCart() {
     return this.deserts.filter((desert) => desert.quantity > 0);
+  }
+
+  grandTotal() {
+    return this.itemsInCart().reduce((acc, cur) => {
+      return acc += (cur.price * cur.quantity)
+    }, 0)
   }
 
   cartIsEmpty() {

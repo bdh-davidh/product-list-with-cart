@@ -4,7 +4,7 @@
   margin-inline: auto;
   border: 1px solid var(--clr-red);
   border-radius: 99999px;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: var(--space-xs);
   font-weight: 600;
   text-align: center;

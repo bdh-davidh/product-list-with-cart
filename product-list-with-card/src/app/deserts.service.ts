@@ -130,6 +130,12 @@ export class DesertsService {
     return this.itemsInCart().length <= 0;
   }
 
+  numberOfItemsInCart() {
+    return this.deserts.reduce((acc, cur) => {
+      return acc += cur.quantity;
+    }, 0)
+  }
+
   resetQuantity(item: any) {
     const itemName = item.querySelector('.name').textContent;
     this.deserts.map((item) => {

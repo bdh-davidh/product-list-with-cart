@@ -2,7 +2,7 @@
   class="box stack cart"
   style="--padding-block: var(--space-m); --padding-inline: var(--space-m)"
 >
-  <h2>Your Cart ({{ desertsService.itemsInCart().length }})</h2>
+  <h2>Your Cart ({{ desertsService.numberOfItemsInCart() }})</h2>
   @if (desertsService.cartIsEmpty()) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -100,5 +100,6 @@
         desertsService.grandTotal() | currency: "USD"
       }}</span>
     </p>
+    <button class="box confirm" style="--padding-block: var(--space-xs);" (click)="handleConfirm()">Confirm Order</button>
   }
 </div>

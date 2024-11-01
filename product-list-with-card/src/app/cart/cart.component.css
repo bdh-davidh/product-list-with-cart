@@ -65,7 +65,7 @@ svg {
   align-items: center;
   justify-content: space-between;
 
-.total {
+  .total {
     color: var(--clr-rose-500);
   }
 
@@ -75,4 +75,12 @@ svg {
     font-size: var(--font-size-2);
     font-weight: 900;
   }
+}
+
+.confirm {
+  inline-size: 100%;
+  border-radius: 2rem;
+  font-weight: 600;
+  color: var(--clr-neutral-light);
+  background-color: var(--clr-red);
 }

@@ -1,12 +1,35 @@
-button {
+.wrapper {
   display: flex;
-  min-inline-size: 12rem;
+  max-inline-size: 12rem;
   margin-inline: auto;
   border: 1px solid var(--clr-red);
   border-radius: 99999px;
-  justify-content: center;
+  justify-content: space-around;
   gap: var(--space-xs);
   font-weight: 600;
-  background-color: var(--clr-neutral-light);
+  text-align: center;
+  background-color:;
   transform: translateY(-50%);
+}
+
+.wrapper:has(.adjust-quantity) {
+  color: var(--clr-neutral-light);
+}
+
+button.initial {
+  display: flex;
+  margin-inline: auto;
+  justify-content: center;
+  gap: var(--space-xs);
+  background-color: inherit;
+}
+
+button.adjust-quantity {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  min-width: 1.5em;
+  border-radius: 99999px;
+  border: 1px solid var(--clr-neutral-light);
+  background-color: inherit;
 }

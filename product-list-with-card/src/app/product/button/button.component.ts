@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
+  @Input() product: any;
+
+  inCart() {
+    return this.product.quantity >= 1;
+  }
 
 }

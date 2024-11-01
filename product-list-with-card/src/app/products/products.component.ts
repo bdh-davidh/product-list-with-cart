@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Products } from "../../../public/assets/data.json"
+import { DesertsService } from '../deserts.service';
 import { ProductComponent } from "./product/product.component";
 
 @Component({
@@ -11,9 +11,9 @@ import { ProductComponent } from "./product/product.component";
   styleUrl: './products.component.css',
 })
 export class ProductsComponent {
-  @Input() deserts = Products;
+  deserts;
 
-  ngOnInit() {
-    console.log(Products);
+  constructor( desertsService: DesertsService) {
+    this.deserts = desertsService.deserts;
   }
 }

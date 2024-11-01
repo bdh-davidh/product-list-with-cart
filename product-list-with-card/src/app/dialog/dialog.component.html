@@ -1,0 +1,27 @@
+<div class="confirmation">
+  <div class="stack" style="--stack: var(--space-3xs)">
+    @for (desert of desertsService.itemsInCart(); track desert.name) {
+    <div class="cart-item">
+      <div class="stack" style="--stack: var(--space-3xs)">
+        <p class="name">{{ desert.name }}</p>
+        <p>
+          <span class="quantity">{{ desert.quantity }}x </span>
+          <span class="price">&#64; {{ desert.price | currency: "USD" }}
+          </span>
+          <span class="item-total">{{
+                  desert.price * desert.quantity | currency: "USD"
+                }}</span>
+        </p>
+      </div>
+
+    </div>
+    }
+  </div>
+  <p class="flex-wrapper">
+    <span class="total">Order Total</span>
+    <span class="grand-total">{{
+          desertsService.grandTotal() | currency: "USD"
+        }}</span>
+  </p>
+  <button class="box confirm" style="--padding-block: var(--space-xs);" (click)="removeAll()">Start new order</button>
+</div>

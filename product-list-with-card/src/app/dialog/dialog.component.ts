@@ -3,13 +3,13 @@ import { CurrencyPipe } from '@angular/common';
 import { DesertsService } from '../deserts.service';
 
 @Component({
-  selector: 'app-cart',
+  selector: 'app-dialog',
   standalone: true,
   imports: [CurrencyPipe],
-  templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css',
+  templateUrl: './dialog.component.html',
+  styleUrl: './dialog.component.css',
 })
-export class CartComponent {
+export class DialogComponent {
   @Output() dialogIsOpen = new EventEmitter<boolean>();
   desertsService;
 
@@ -17,11 +17,7 @@ export class CartComponent {
     this.desertsService = desertsService;
   }
 
-  handleRemove(event: any) {
-    this.desertsService.resetQuantity(event.target.closest('.cart-item'));
-  }
-
-  handleConfirm() {
-    this.dialogIsOpen.emit(true);
+  removeAll() {
+    this.dialogIsOpen.emit(false);
   }
 }

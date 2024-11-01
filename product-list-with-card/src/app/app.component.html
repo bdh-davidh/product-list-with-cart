@@ -1,6 +1,9 @@
 <main>
+  @if (dialogIsOpen) {
+    <app-dialog (dialogIsOpen)="openDialog($event)"/>
+  }
   <app-products />
 </main>
 <aside>
-  <app-cart />
+  <app-cart (dialogIsOpen)="openDialog($event)" />
 </aside>

@@ -21,8 +21,9 @@ export class DialogComponent {
   }
 
   removeAll() {
-    this.dialog.nativeElement.close();
     this.dialogIsOpen.emit(false);
+    this.desertsService.resetAll();
+    this.dialog.nativeElement.close();
   }
 
   ngOnInit() {

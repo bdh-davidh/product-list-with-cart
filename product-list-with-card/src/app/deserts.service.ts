@@ -144,4 +144,10 @@ export class DesertsService {
       }
     })
   }
+
+  resetAll() {
+    return this.deserts.map((desert) => {
+      desert.quantity = 0;
+    })
+  }
 }

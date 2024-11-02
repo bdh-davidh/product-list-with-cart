@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CurrencyPipe } from '@angular/common'
-import { ButtonComponent } from "../../product/button/button.component";
+import { ButtonComponent } from "./button/button.component";
+import { Desert } from '../../desert.model';
 
 @Component({
   selector: 'app-product',
@@ -10,7 +11,7 @@ import { ButtonComponent } from "../../product/button/button.component";
   styleUrl: './product.component.css',
 })
 export class ProductComponent {
-  @Input() product: any;
+  @Input() product!: Desert;
 
   get imagePath() {
     return 'assets/images/' + this.product.image.desktop;

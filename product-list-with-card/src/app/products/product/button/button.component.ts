@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { DesertsService } from '../../deserts.service';
+import { DesertsService } from '../../../deserts.service';
+import { Desert } from '../../../desert.model';
 
 @Component({
   selector: 'app-button',
@@ -9,7 +10,7 @@ import { DesertsService } from '../../deserts.service';
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
-  @Input() product: any;
+  @Input() product!: Desert;
   desertService;
 
   constructor(desertService: DesertsService) {
@@ -20,7 +21,6 @@ export class ButtonComponent {
     return this.product.quantity >= 1;
   }
 
-  // CHECK is this mutating state?
   increment() {
     this.product.quantity += 1;
   }

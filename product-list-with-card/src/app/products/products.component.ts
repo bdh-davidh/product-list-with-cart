@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DesertsService } from '../deserts.service';
 import { ProductComponent } from "./product/product.component";
+import { Desert } from '../desert.model';
 
 @Component({
   selector: 'app-products',
@@ -11,9 +12,9 @@ import { ProductComponent } from "./product/product.component";
   styleUrl: './products.component.css',
 })
 export class ProductsComponent {
-  deserts;
+  deserts: Desert[];
 
-  constructor( desertsService: DesertsService) {
+  constructor(desertsService: DesertsService) {
     this.deserts = desertsService.deserts;
   }
 }

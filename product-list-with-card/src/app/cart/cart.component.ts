@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { CurrencyPipe } from '@angular/common';
 import { DesertsService } from '../deserts.service';
+import { Desert } from '../desert.model';
 
 @Component({
   selector: 'app-cart',

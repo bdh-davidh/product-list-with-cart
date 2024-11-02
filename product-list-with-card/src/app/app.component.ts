@@ -12,10 +12,9 @@ import { DialogComponent } from './dialog/dialog.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-
   dialogIsOpen: boolean = false;
 
-  openDialog(value: any) {
+  openDialog(value: boolean) {
     this.dialogIsOpen = value;
   }
 }

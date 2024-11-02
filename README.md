@@ -1,9 +1,8 @@
 TODO
-CSS
-Interface
-Confirm - dismiss then again?
+CSS - hover states
 
 Questions:
-State mutation
-Modal - seperate service?
-CSS - approaches
+State mutation?
+Reaching into DOM
+  - delete from cart - had to leave type 'any'
+  - native dialog - flag issue, used @ViewChild?

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Desert } from './desert.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DesertsService {
-  deserts = [
+  deserts: Desert[] = [
     {
       image: {
         thumbnail: 'image-waffle-thumbnail.jpg',
@@ -52,7 +53,6 @@ export class DesertsService {
       category: 'Tiramisu',
       price: 5.5,
       quantity: 0,
-      id: 4,
     },
     {
       image: {

@@ -195,7 +195,7 @@ h3 {
 
 :focus-visible {
   opacity: 1 !important;
-  outline: 2px dashed currentcolor;
+  outline: 2px dashed var(--clr-rose-900);
   outline-offset: 3px;
 }
 

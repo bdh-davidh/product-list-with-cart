@@ -10,6 +10,11 @@
   text-align: center;
   background-color:;
   transform: translateY(-50%);
+  transition: box-shadow 200ms cubic-bezier(.17, .67, .61, 1.41);
+
+  &:hover {
+    box-shadow: var(--shadow-elevation-low);
+  }
 }
 
 .wrapper:has(.adjust-quantity) {
@@ -20,9 +25,11 @@
   min-inline-size: 3ch;
 }
 
+
+
 button.initial {
   display: flex;
-  min-block-size: 1.5em;
+  min-inline-size: 100%;
   margin-inline: auto;
   justify-content: center;
   gap: var(--space-xs);

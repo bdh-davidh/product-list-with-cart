@@ -1,5 +1,3 @@
-TODO
-CSS - hover states
 
 Questions:
 State mutation?

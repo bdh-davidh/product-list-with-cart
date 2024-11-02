@@ -1,5 +1,12 @@
 .product {
   border-radius: var(--space-2xs);
+  box-shadow: 0;
+  transition: box-shadow 1200ms cubic-bezier(.17, .67, .61, 1.41);
+
+  &:hover {
+    box-shadow: var(--shadow-elevation-high);
+    transition: box-shadow 300ms cubic-bezier(.17, .67, .61, 1.41);
+  }
 
   img {
     border-radius: inherit;

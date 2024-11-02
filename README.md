@@ -1,27 +1,13 @@
-# ProductListWithCard
+# Product List - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+Continuing with Angular learning....
 
-## Development server
+I've a couple of questions I'd love feedback on - mostly based on my experience with React:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1) Am I mutating state and does this matter?
+In the button component I am increasing/decreasing the quantity within the component rather than destroying and updating the state in DesertsService. Everything seems to work OK, but I'm not sure if this is bad practice?
 
-## Code scaffolding
+2) Reaching into the DOM...
+I'm reaching into the DOM to remove items from the Cart component. I feel like this is wrong. From working with React I feel like I should be handing this over to Angular to take care of rather than using `querySelector`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+I am also using the native HTML `dialog` element and methods for the modal. Again this feels wrong, and being able to dismiss the modal with the escape key knocks state out of sync. I used `@viewChild` to access the dialog, but honestly, I just pasted this in with little understanding.
